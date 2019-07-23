@@ -4,13 +4,19 @@ This class enables easy access to Koala TCP/IP remote interface
 Prompt dialog for connection and login
 Get functions return numpy Array
 """
-
+#import python package
 import numpy as np
 import sys
 import clr
+import ctypes
+
+#Add required dotNet reference
+clr.AddReference("System")
 import System
 from System import Array
-import ctypes
+clr.AddReference("System.Runtime")
+clr.AddReference("System.Runtime.InteropServices")
+from System.Runtime.InteropServices import GCHandle, GCHandleType
 
 #get input form console, if input is empty us default value
 def get_input(question,default) :
@@ -18,10 +24,6 @@ def get_input(question,default) :
     return answer or default
 
 #fonction dn2cp : copy dotNet array to Numpy array directly from memory
-clr.AddReference("System.Runtime")
-clr.AddReference("System.Runtime.InteropServices")
-from System.Runtime.InteropServices import GCHandle, GCHandleType
-
 def dn2np(src) :
     #Arg src : the source dotNEt source Array
     #Retrun dest : the copy of src into a numpy array
