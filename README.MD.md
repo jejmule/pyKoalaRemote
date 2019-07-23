@@ -8,7 +8,13 @@ Methods that return a dotNet Array are modified to return a Numpy Array, modifie
 ## Installation using pip
 
     pip install pyKoalaRemote
-    
+ 
+ ## Test
+ From Ipython console
+
+    from pyKoalaRemote import client
+    run client
+It runs test code in the 
 ## Usage
 Import the class client from the pyKoalaRemote and create an instance
 
@@ -70,6 +76,8 @@ The methods that returns dotNet Array are modified to return Numpy Array
 
     
 > Written with [StackEdit](https://stackedit.io/).
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MzU0MTU5MSwtNjM2NTkyMTkzXX0=
+eyJoaXN0b3J5IjpbLTc2NTU2ODA2NiwxODczNTQxNTkxLC02Mz
+Y1OTIxOTNdfQ==
 -->
