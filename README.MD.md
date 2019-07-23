@@ -23,13 +23,15 @@ Run standard methods
 ## Modified methods
 The methods that returns dotNet Array are modified to return Numpy Array
 
- - GetAxesPosMu()
+ - GetAxesPosMu
 	 - Arguments : void (nothing)
-	 - Return a 1D numpy array with satges
- - 
+	 - Return : Array of doubles of size 4, where the data for the X, Y, Z and Theta axis respectively
+ - GetHoloImage
+	 - Arguments : void (nothing)
+	 - Return : Array of 
 
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MTg3MjUyNiwtNjM2NTkyMTkzXX0=
+eyJoaXN0b3J5IjpbLTE4MDAxNzU4MDcsLTYzNjU5MjE5M119
 -->
