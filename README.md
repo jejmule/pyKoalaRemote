@@ -21,7 +21,12 @@ Run standard methods
     remote.OpenConfig(137)
 
 ## New methods
-Two new methods enable a dialog 
+Two new methods enable a dialog in the console.
+
+ - ConnectAndLoginDialog
+	 - Connect and Login to 
+ - OpenConfigDialog
+
 ## Modified methods
 The methods that returns dotNet Array are modified to return Numpy Array
 
@@ -56,5 +61,5 @@ The methods that returns dotNet Array are modified to return Numpy Array
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUzMTA0MzkwLC02MzY1OTIxOTNdfQ==
+eyJoaXN0b3J5IjpbOTI2MTE3NDM1LC02MzY1OTIxOTNdfQ==
 -->
