@@ -12,10 +12,14 @@ The methods that return a dotNet Array are modified to return a Numpy Array, mod
 Import the class client from the pyKoalaRemote and create an instance
 
     from  pyKoalaRemote import client
-    remote = client.pyKoalaRemoteCl()
+    remote = client.pyKoalaRemoteClient()
+ 
+Then you can run standard methods
+
+    enter code here
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTYzNzAxMDksLTQ0MTczNDM1OSwxOT
-Y5OTc0MjAzXX0=
+eyJoaXN0b3J5IjpbMTE0NjEyNDYxNiwtNDQxNzM0MzU5LDE5Nj
+k5NzQyMDNdfQ==
 -->
