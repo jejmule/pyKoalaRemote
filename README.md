@@ -23,6 +23,10 @@ Run standard methods
 ## Modified methods
 The methods that returns dotNet Array are modified to return Numpy Array
 
+ - Connect(ho
+	 - Arguments : 
+		 - String hostname
+ - 
  - GetAxesPosMu
 	 - Arguments : void (nothing)
 	 - Return : 1D Numpy array of np.double of size 4, where the data for the X, Y, Z and Theta axis respectively
@@ -43,10 +47,10 @@ The methods that returns dotNet Array are modified to return Numpy Array
 	 - Return : 2D Numpy array of np.single of ROI size
  - GetPhaseProfile
 	 - Arguments : void (nothing)
-	 - Return : 1D Numpy array of np.double of profile l
+	 - Return : 1D Numpy array of np.double of profile length
 
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3ODkzMjkwMywtNjM2NTkyMTkzXX0=
+eyJoaXN0b3J5IjpbMTg1MzM4MDQ4MCwtNjM2NTkyMTkzXX0=
 -->
