@@ -5,7 +5,7 @@ Prompt dialog for connection and login
 Get functions return numpy Array
 """
 #import python package
-import remote_utils as ru
+from . import remote_utils as ru
 import numpy as np
 import sys
 import clr
@@ -167,6 +167,9 @@ class pyKoalaRemoteClient:
         self.host.GetPhaseProfile(buffer)
         #copy and return buffer
         return ru.dn2np(buffer)
+    
+    def GetPhaseProfileAxis(self):
+        return np.arange(self.GetPhaseProfileLength()) * self.GetPxSizeUm()
     
     #wrapper for remote function, direct call
     def AccWDSearch(self,distUM,stepUM):
