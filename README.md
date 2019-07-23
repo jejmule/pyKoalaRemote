@@ -23,9 +23,11 @@ Run standard methods
 ## Modified methods
 The methods that returns dotNet Array are modified to return Numpy Array
 
- - Connect(ho
-	 - Arguments : 
-		 - String hostname
+ - Connect(hostname, quiet=True)
+	 - Arguments :
+		 - hostName (String): The IP of the computer where Koala is running. Use localhost if running on the same computer
+		 - quiet (Boolean): Deprecated parameter, will be removed in a later version. Set either to true or false
+	 - Return 
  - 
  - GetAxesPosMu
 	 - Arguments : void (nothing)
@@ -52,5 +54,5 @@ The methods that returns dotNet Array are modified to return Numpy Array
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MzM4MDQ4MCwtNjM2NTkyMTkzXX0=
+eyJoaXN0b3J5IjpbLTIwMDQwMjQ5MSwtNjM2NTkyMTkzXX0=
 -->
