@@ -56,7 +56,7 @@ def dn2np(src) :
     return dest
 
 #Class pyRemote to manage dotNet dll in Python
-class pyRemote:
+class pyKoalaRemoteClient:
     
     def __init__(self, koala_8 = True):
         self.koala_8 = koala_8
@@ -95,7 +95,7 @@ class pyRemote:
         else:
             print('connection to Koala failed on :',IP)
             print('Check if Koala is started or if the production window is open or if the previous session was closed')
-            return
+            return False
         
         #ask for username password
         password = get_input('Enter password for '+self.username+' account', self.username)
@@ -104,6 +104,8 @@ class pyRemote:
             print('Log as ',self.username,)
         else :
             print('Login failed for',self.username,)
+            return False
+        return True
     
     def Connect(self,hostName,quiet=True):
         self.username = ''
@@ -128,7 +130,7 @@ class pyRemote:
         #☻get config Id
         config = get_input('Enter configuration number', default='137')
         #open config
-        self.OpenConfig(config)
+        return self.OpenConfig(config)
    
     def OpenConfig(self, configNumber) :
         try : self.host.OpenConfig(configNumber)
@@ -354,19 +356,10 @@ class pyRemote:
 
 #test the class when running this file directly
 if __name__ == '__main__' :
-    remote = pyRemote()
+    remote = pyKoalaRemoteClient()
     remote.ConnectAndLoginDialog()
-    import matplotlib.pyplot as plt
-    from IPython import get_ipython
-    get_ipython().run_line_magic('matplotlib', 'inline')
-#    get_ipython().run_line_magic('matplotlib', 'qt')
-    plt.imshow(remote.GetHoloImage(),cmap="gray")
-    plt.figure()
-    plt.imshow(remote.GetIntensity32fImage(),cmap="gray")
-    plt.figure()
-    plt.imshow(remote.GetIntensityImage(),cmap="gray")
-    plt.figure()
-    plt.imshow(remote.GetPhase32fImage(),cmap="gray")
-    plt.figure()
-    plt.imshow(remote.GetPhaseImage(),cmap="gray")
-    
+    remote.OpenConfigDialog()
+    remote.OpenHoloWin()
+    remote.OpenIntensityWin()
+    remote.OpenPhaseWin()
+    remote.Logout()
