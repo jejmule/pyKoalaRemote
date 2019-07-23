@@ -29,11 +29,22 @@ The methods that returns dotNet Array are modified to return Numpy Array
  - GetHoloImage
 	 - Arguments : void (nothing)
 	 - Return : 2D Numpy array of np.ubyte of hologram size
- - List item
- - 
+ - GetIntensityImage
+	 - Arguments : void (nothing)
+	 - Return : 2D Numpy array of np.single of ROI size
+ - GetIntensity32fImage
+	 - Arguments : void (nothing)
+	 - Return : 2D Numpy array of np.single of ROI size
+ - GetIntensity32fImage
+	 - Arguments : void (nothing)
+	 - Return : 2D Numpy array of np.single of ROI size
+ - GetIntensity32fImage
+	 - Arguments : void (nothing)
+	 - Return : 2D Numpy array of np.single of ROI size
+
 
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI3ODg4Nzc2LC02MzY1OTIxOTNdfQ==
+eyJoaXN0b3J5IjpbMTI2MjY1NDE1OCwtNjM2NTkyMTkzXX0=
 -->
