@@ -28,10 +28,10 @@ The methods that returns dotNet Array are modified to return Numpy Array
 	 - Return : Array of doubles of size 4, where the data for the X, Y, Z and Theta axis respectively
  - GetHoloImage
 	 - Arguments : void (nothing)
-	 - Return : Array of 
+	 - Return : Array of U8 of image size
 
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDAxNzU4MDcsLTYzNjU5MjE5M119
+eyJoaXN0b3J5IjpbLTE2MjUzOTI5NDUsLTYzNjU5MjE5M119
 -->
