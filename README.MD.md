@@ -16,10 +16,12 @@ Import the class client from the pyKoalaRemote and create an instance
  
 Then you can run standard methods
 
-    enter code here
+    remote.Connect("localhost")
+    remote.Login("password")
+    remote.OpenConfig(137)
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NjEyNDYxNiwtNDQxNzM0MzU5LDE5Nj
-k5NzQyMDNdfQ==
+eyJoaXN0b3J5IjpbLTE5MzI2MzExMzYsLTQ0MTczNDM1OSwxOT
+Y5OTc0MjAzXX0=
 -->
