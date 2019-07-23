@@ -9,12 +9,13 @@ The methods that return a dotNet Array are modified to return a Numpy Array, mod
     pip install pyKoalaRemote
     
 ## Usage
-import the class client from the 
+Import the class client from the pyKoalaRemote and create an instance
 
     from  pyKoalaRemote import client
-
+    remote = client.pyRemote()
+    
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODA5OTM3MjIsLTQ0MTczNDM1OSwxOT
-Y5OTc0MjAzXX0=
+eyJoaXN0b3J5IjpbMTAzNTE1MzQwNCwtNDQxNzM0MzU5LDE5Nj
+k5NzQyMDNdfQ==
 -->
