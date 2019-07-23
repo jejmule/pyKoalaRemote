@@ -5,55 +5,17 @@ Prompt dialog for connection and login
 Get functions return numpy Array
 """
 #import python package
+import remote_utils as ru
 import numpy as np
 import sys
 import clr
-import ctypes
+
+
 
 #Add required dotNet reference
 clr.AddReference("System")
 import System
 from System import Array
-clr.AddReference("System.Runtime")
-clr.AddReference("System.Runtime.InteropServices")
-from System.Runtime.InteropServices import GCHandle, GCHandleType
-
-#get input form console, if input is empty us default value
-def get_input(question,default) :
-    answer = input(question+'['+default+'] :')
-    return answer or default
-
-#fonction dn2cp : copy dotNet array to Numpy array directly from memory
-def dn2np(src) :
-    #Arg src : the source dotNEt source Array
-    #Retrun dest : the copy of src into a numpy array
-    
-    #Get GCHandle to handle managed memory with non-managed code
-    src_hndl = GCHandle.Alloc(src, GCHandleType.Pinned)
-    
-    #Get numpy type from dotNet Array
-    array_type = src.GetType()
-    if array_type.ToString() == "System.Byte[]" :
-        ctype = ctypes.c_ubyte
-    elif array_type.ToString() == "System.Single[]" :
-        ctype = ctypes.c_float
-    elif array_type.ToString() == "System.Double[]" :
-        ctype = ctypes.c_double
-    else:
-        print("Array type",array_type.ToString(),"does not match with numpy type")
-        return
-    
-    try:
-        #Get pointer to source
-        src_ptr = src_hndl.AddrOfPinnedObject().ToInt64()
-        bufType = ctype*len(src)
-        #Copy src to dst
-        cbuf = bufType.from_address(src_ptr)
-        dest = np.frombuffer(cbuf, dtype=cbuf._type_)
-    finally:
-        #Allow the garbage collector to free managed memory
-        if src_hndl.IsAllocated: src_hndl.Free()
-    return dest
 
 #Class pyRemote to manage dotNet dll in Python
 class pyKoalaRemoteClient:
@@ -88,7 +50,7 @@ class pyKoalaRemoteClient:
     
     def ConnectAndLoginDialog(self) :
         #Ask for IP adress
-        IP = get_input('Enter host IP adress','localhost')
+        IP = ru.get_input('Enter host IP adress','localhost')
         #Connect to Koala
         if self.Connect(IP):
             print('connected to Koala as',self.username,'on ',IP)
@@ -98,7 +60,7 @@ class pyKoalaRemoteClient:
             return False
         
         #ask for username password
-        password = get_input('Enter password for '+self.username+' account', self.username)
+        password = ru.get_input('Enter password for '+self.username+' account', self.username)
         #Login with username password
         if self.Login(password) :
             print('Log as ',self.username,)
@@ -128,7 +90,7 @@ class pyKoalaRemoteClient:
     #Open a configuration using config id
     def OpenConfigDialog(self) :
         #☻get config Id
-        config = get_input('Enter configuration number', default='137')
+        config = ru.get_input('Enter configuration number', default='137')
         #open config
         return self.OpenConfig(config)
    
@@ -157,7 +119,7 @@ class pyKoalaRemoteClient:
         buffer = Array.CreateInstance(System.Double,4)
         self.host.GetAxesPosMu(buffer)
         #copy and return buffer
-        return dn2np(buffer)
+        return ru.dn2np(buffer)
     
     def GetHoloImage(self) :
         #Define a dotNet (C#) Byte Array
@@ -167,7 +129,7 @@ class pyKoalaRemoteClient:
         #Get holo from Koala
         self.host.GetHoloImage(buffer)
         #copy, reshape and return buffer
-        return np.reshape(dn2np(buffer),(self.height,self.width))
+        return np.reshape(ru.dn2np(buffer),(self.height,self.width))
     
     def GetIntensity32fImage(self) :
         self.updateROI()
@@ -175,14 +137,14 @@ class pyKoalaRemoteClient:
         buffer = Array.CreateInstance(System.Single,self.roiHeight*self.roiWidth)
         self.host.GetIntensity32fImage(buffer)
         #copy, reshape and return buffer
-        return np.reshape(dn2np(buffer),(self.roiHeight,self.roiWidth))
+        return np.reshape(ru.dn2np(buffer),(self.roiHeight,self.roiWidth))
     
     def GetIntensityImage(self) :
         #Define a dotNet (C#) Byte Array
         buffer = Array.CreateInstance(System.Byte,self.updateROI())
         self.host.GetIntensityImage(buffer)
         #copy, reshape and return buffer
-        return np.reshape(dn2np(buffer),(self.roiHeight,self.roiStride))[:,0:self.roiWidth]
+        return np.reshape(ru.dn2np(buffer),(self.roiHeight,self.roiStride))[:,0:self.roiWidth]
     
     def GetPhase32fImage(self) :
         self.updateROI()
@@ -190,21 +152,21 @@ class pyKoalaRemoteClient:
         buffer = Array.CreateInstance(System.Single,self.roiHeight*self.roiWidth)
         self.host.GetPhase32fImage(buffer)
         #copy, reshape and return buffer
-        return np.reshape(dn2np(buffer),(self.roiHeight,self.roiWidth))
+        return np.reshape(ru.dn2np(buffer),(self.roiHeight,self.roiWidth))
     
     def GetPhaseImage(self) :
         #Define a dotNet (C#) Byte Array
         buffer = Array.CreateInstance(System.Byte,self.updateROI())
         self.host.GetPhaseImage(buffer)
         #copy, reshape and return buffer
-        return np.reshape(dn2np(buffer),(self.roiHeight,self.roiStride))[:,0:self.roiWidth]
+        return np.reshape(ru.dn2np(buffer),(self.roiHeight,self.roiStride))[:,0:self.roiWidth]
     
     def GetPhaseProfile(self) :
         #Define a dotNet (C#) Double Array
         buffer = Array.CreateInstance(System.Double,self.GetPhaseProfileLength())
         self.host.GetPhaseProfile(buffer)
         #copy and return buffer
-        return dn2np(buffer)
+        return ru.dn2np(buffer)
     
     #wrapper for remote function, direct call
     def AccWDSearch(self,distUM,stepUM):
