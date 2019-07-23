@@ -24,6 +24,8 @@ Run standard methods
 Two new methods enable a dialog in the console.
 
  - ConnectAndLoginDialog
+	 - Arguments : void(nothing)
+	 - Return 
 	 - Connect and Login to Koala within a single function.
 	 - IP address and password are defined in the console
 	 - If the user leave empty field, the default value is used
@@ -63,5 +65,5 @@ The methods that returns dotNet Array are modified to return Numpy Array
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTk5NjYyNTcsLTYzNjU5MjE5M119
+eyJoaXN0b3J5IjpbLTE4MDMyNjIyNTUsLTYzNjU5MjE5M119
 -->
