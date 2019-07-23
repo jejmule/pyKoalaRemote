@@ -23,10 +23,13 @@ Run standard methods
 ## Modified methods
 The methods that returns dotNet Array are modified to return Numpy Array
 
- - List item
+ - GetAxesPosMu()
+	 - Arguments : void (nothing)
+	 - Return a 1D numpy array with satges
+ - 
 
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDE0OTQxOSwtNjM2NTkyMTkzXX0=
+eyJoaXN0b3J5IjpbLTg3MTg3MjUyNiwtNjM2NTkyMTkzXX0=
 -->
