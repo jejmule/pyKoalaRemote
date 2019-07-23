@@ -7,7 +7,7 @@ setuptools.setup(
     name="KoalaRemote-jejmule",
     version="0.0.1",
     author="Jérôme Parent",
-    author_email="jerome.parent@lynceetec.com/pypa/sampleproject",
+    author_email="jerome.parent@lynceetec.com",
     description="Python wrapper for dotNet Koala Remote Client provided by LyncéeTec to control Digital Holographique Microscope using proprietary Koala software",
     long_description=long_description,
     long_description_content_type="text/markdown",
