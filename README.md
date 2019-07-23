@@ -1,7 +1,7 @@
 # pyKoalaRemote
-Python wrapper for dotNet Koala Remote Client provided by LyncéeTec to control Digital Holographique Microscope using proprietary Koala software
+Python wrapper for dotNet Koala Remote Client provided by LynceeTec to control Digital Holographic Microscope using proprietary Koala software
 
-The wrapper uses the same methods names and arguments as the dotNet library distributed by LyncéeTec SA LynceeTec.KoalaRemote.Client.  [LynceeTec.KoalaRemote.Client.dll documentation](https://github.com/jejmule/pyKoalaRemote/blob/master/Koala%20Remote%20-%20Users%20Manual.pdf)
+The wrapper uses the same methods names and arguments as the dotNet library distributed by LynceeTec SA LynceeTec.KoalaRemote.Client.  [LynceeTec.KoalaRemote.Client.dll documentation](https://github.com/jejmule/pyKoalaRemote/blob/master/Koala%20Remote%20-%20Users%20Manual.pdf)
 
 Methods that return a dotNet Array are modified to return a Numpy Array, modified methods are described bellow.
 
@@ -77,6 +77,6 @@ The methods that returns dotNet Array are modified to return Numpy Array
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MjQ4ODM4NCwxODczNTQxNTkxLC02Mz
-Y1OTIxOTNdfQ==
+eyJoaXN0b3J5IjpbMTQyOTA1NjIyMiwxNDQyNDg4Mzg0LDE4Nz
+M1NDE1OTEsLTYzNjU5MjE5M119
 -->
