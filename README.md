@@ -42,7 +42,7 @@ Two new methods enable a dialog in the console.
 	 - Comments : 
 		 - Config number is defined in the console
  - GetPhaseProfileAxis
-	 - Description : return calibrated axis in um
+	 - Description : return calibrated axis in [um] of a profile cut
 	 - Arguments : void(nothing)
 	 - Return : 1D Numpy array of np.double of profile length
 
@@ -81,6 +81,6 @@ The methods that returns dotNet Array are modified to return Numpy Array
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUxNDgwMjgxLDE0MjkwNTYyMjIsMTQ0Mj
-Q4ODM4NCwxODczNTQxNTkxLC02MzY1OTIxOTNdfQ==
+eyJoaXN0b3J5IjpbLTEzNjA0MDYxMzAsMTQyOTA1NjIyMiwxND
+QyNDg4Mzg0LDE4NzM1NDE1OTEsLTYzNjU5MjE5M119
 -->
