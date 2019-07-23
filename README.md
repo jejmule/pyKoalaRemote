@@ -27,8 +27,8 @@ The methods that returns dotNet Array are modified to return Numpy Array
 	 - Arguments :
 		 - hostName (String): The IP of the computer where Koala is running. Use localhost if running on the same computer
 		 - quiet (Boolean): Deprecated parameter, will be removed in a later version. Set either to true or false
-	 - Return 
- - 
+	 - Return : true if the connection was successful
+	 - Comments : the instance variable username is set with username
  - GetAxesPosMu
 	 - Arguments : void (nothing)
 	 - Return : 1D Numpy array of np.double of size 4, where the data for the X, Y, Z and Theta axis respectively
@@ -54,5 +54,5 @@ The methods that returns dotNet Array are modified to return Numpy Array
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDQwMjQ5MSwtNjM2NTkyMTkzXX0=
+eyJoaXN0b3J5IjpbLTEyODY4NzI4NzAsLTYzNjU5MjE5M119
 -->
