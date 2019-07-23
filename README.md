@@ -41,6 +41,10 @@ Two new methods enable a dialog in the console.
 	 - Return : true if the connection and login was successful
 	 - Comments : 
 		 - Config number is defined in the console
+ - GetPhaseProfileAxis
+	 - Description : return calibrated axis in um
+	 - Arguments : void(nothing)
+	 - Return : 1D Numpy array of np.double of profile length
 
 ## Modified methods
 The methods that returns dotNet Array are modified to return Numpy Array
@@ -77,6 +81,6 @@ The methods that returns dotNet Array are modified to return Numpy Array
 > Written with [StackEdit](https://stackedit.io/).
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyOTA1NjIyMiwxNDQyNDg4Mzg0LDE4Nz
-M1NDE1OTEsLTYzNjU5MjE5M119
+eyJoaXN0b3J5IjpbNDUxNDgwMjgxLDE0MjkwNTYyMjIsMTQ0Mj
+Q4ODM4NCwxODczNTQxNTkxLC02MzY1OTIxOTNdfQ==
 -->
