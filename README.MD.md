@@ -19,9 +19,11 @@ Then you can run standard methods
     remote.Connect("localhost")
     remote.Login("password")
     remote.OpenConfig(137)
+
+## Modified methods
+
     
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzI2MzExMzYsLTQ0MTczNDM1OSwxOT
-Y5OTc0MjAzXX0=
+eyJoaXN0b3J5IjpbLTYzNjU5MjE5M119
 -->
