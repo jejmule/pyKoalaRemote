@@ -168,6 +168,9 @@ class pyKoalaRemoteClient:
         #copy and return buffer
         return ru.dn2np(buffer)
     
+    def GetPhaseProfileAxis(self):
+        return np.arange(self.GetPhaseProfileLength()) * self.GetPxSizeUm()
+    
     #wrapper for remote function, direct call
     def AccWDSearch(self,distUM,stepUM):
         return self.host.AccWDSearch(distUM,stepUM)
