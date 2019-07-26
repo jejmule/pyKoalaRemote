@@ -5,7 +5,7 @@ Prompt dialog for connection and login
 Get functions return numpy Array
 """
 #import python package
-from . import remote_utils as ru
+from pyKoalaRemote import remote_utils as ru
 import numpy as np
 import sys
 import clr
