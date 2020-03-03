@@ -89,7 +89,7 @@ class pyKoalaRemoteClient:
     
     #Open a configuration using config id
     def OpenConfigDialog(self) :
-        #☻get config Id
+        #get config Id
         config = ru.get_input('Enter configuration number', default='137')
         #open config
         return self.OpenConfig(config)
